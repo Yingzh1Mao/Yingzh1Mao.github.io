@@ -7,7 +7,6 @@ const translations = {
     navNews: "News",
     navResearch: "Research",
     navPublications: "Publications",
-    navContact: "Contact",
     subtitle:
       "Master Student, Chinese Information Processing Laboratory, Institute of Software, Chinese Academy of Sciences",
     heroLead1Prefix:
@@ -54,7 +53,6 @@ const translations = {
     navNews: "动态",
     navResearch: "研究方向",
     navPublications: "论文成果",
-    navContact: "联系方式",
     subtitle: "中国科学院软件研究所中文信息处理实验室 硕士研究生",
     heroLead1Prefix: "我目前在中国科学院软件研究所",
     labName: "中文信息处理实验室",
