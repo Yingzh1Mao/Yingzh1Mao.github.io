@@ -180,7 +180,9 @@ html[lang="zh-CN"] h1 .name-en {
   border-radius: 999px;
   background: #fff;
   color: var(--text);
+  font: inherit;
   font-size: 0.9rem;
+  cursor: pointer;
   transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
@@ -199,6 +201,76 @@ html[lang="zh-CN"] h1 .name-en {
 
 .icon-link__label {
   white-space: nowrap;
+}
+
+.wechat-dialog {
+  width: min(360px, calc(100% - 32px));
+  padding: 0;
+  color: var(--text);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(31, 35, 40, 0.22);
+}
+
+.wechat-dialog::backdrop {
+  background: rgba(31, 35, 40, 0.42);
+}
+
+.wechat-dialog__body {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.wechat-dialog__body h2 {
+  margin-bottom: 0;
+}
+
+.wechat-dialog__body p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.wechat-dialog__body img {
+  display: block;
+  width: min(260px, 100%);
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.wechat-dialog__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.wechat-dialog__close:hover {
+  color: var(--text);
+  background: #f6f8fa;
+}
+
+.wechat-dialog__close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.wechat-id {
+  font-size: 0.9rem;
 }
 
 .sr-only {
@@ -241,9 +313,40 @@ p {
   padding-left: 20px;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding-left: 0;
+  list-style: none;
+}
+
 .news-list li,
 .tag-list li {
   margin: 10px 0;
+}
+
+.tag-list li {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin: 0;
+  padding: 5px 12px;
+  color: #24292f;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(31, 35, 40, 0.06);
+  transition: color 160ms ease, background-color 160ms ease,
+    border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.tag-list li:hover {
+  color: var(--link-hover);
+  background: #eef6ff;
+  border-color: #0969da;
+  box-shadow: 0 4px 12px rgba(9, 105, 218, 0.12);
+  transform: translateY(-1px);
 }
 
 .item-date {

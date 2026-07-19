@@ -48,7 +48,15 @@
               </svg>
               <span class="icon-link__label" data-i18n="contactEmail">Email</span>
             </a>
-            <a class="icon-link" href="https://github.com/SsllyZz" target="_blank" rel="noreferrer">
+            <button class="icon-link" type="button" id="wechat-button" aria-haspopup="dialog" aria-controls="wechat-dialog" aria-expanded="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9.2 6.2c-3.2 0-5.8 2.03-5.8 4.54 0 1.45.87 2.74 2.22 3.57l-.5 1.7 2.02-1.02c.63.18 1.33.28 2.06.28 3.2 0 5.8-2.03 5.8-4.53S12.4 6.2 9.2 6.2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                <path d="M13.2 10.1c2.86.3 5 2.17 5 4.42 0 1.25-.67 2.39-1.75 3.2l.43 1.48-1.72-.87c-.56.16-1.17.25-1.81.25-2.53 0-4.7-1.28-5.47-3.08" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.25 9.95h.01M10.95 9.95h.01M12.28 14.55h.01M15.55 14.55h.01" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </svg>
+              <span class="icon-link__label" data-i18n="contactWechat">WeChat</span>
+            </button>
+            <a class="icon-link" href="https://github.com/Yingzh1Mao" target="_blank" rel="noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 2.5a9.5 9.5 0 0 0-3 18.52c.48.09.65-.2.65-.46v-1.62c-2.64.57-3.2-1.12-3.2-1.12-.43-1.08-1.04-1.37-1.04-1.37-.86-.58.06-.57.06-.57.95.07 1.45.97 1.45.97.85 1.44 2.22 1.02 2.77.78.09-.61.33-1.02.59-1.25-2.11-.24-4.34-1.04-4.34-4.66 0-1.03.37-1.87.97-2.54-.1-.24-.42-1.21.09-2.53 0 0 .79-.25 2.6.97a8.98 8.98 0 0 1 4.74 0c1.81-1.22 2.6-.97 2.6-.97.51 1.32.19 2.29.09 2.53.6.67.97 1.51.97 2.54 0 3.63-2.23 4.42-4.35 4.65.34.3.64.88.64 1.77v2.63c0 .26.17.56.66.46A9.5 9.5 0 0 0 12 2.5Z" fill="currentColor"/>
               </svg>
@@ -146,7 +154,7 @@
               <h3 data-i18n="intern1Org">Ant Group · Alipay Business Group, Edge Intelligence Department</h3>
               <p data-i18n="intern1Role">Algorithm Intern</p>
               <p class="publication-meta" data-i18n="intern1Focus">
-                Research focus: multi-dimensional capability evaluation of Alipay AI and judge-pipeline construction, collaborating with teammates to surface model issues.
+                Participated in the development and iterative optimization of AI Alipay (Abao), helping analyze and resolve model issues in real-world user scenarios.
               </p>
             </div>
           </article>
@@ -179,7 +187,7 @@
         <h2 data-i18n="honorsTitle">Honors</h2>
         <ul class="news-list">
           <li>
-            <span class="item-date" data-i18n="honorDateCann">Apr 2026</span>
+            <span class="item-date" data-i18n="honorDateCann">2026</span>
             <span data-i18n="honorCann">CANN (Huawei Ascend) Core Contributor Certification</span>
           </li>
           <li>
@@ -190,6 +198,19 @@
       </section>
     </main>
   </div>
+  <dialog class="wechat-dialog" id="wechat-dialog" aria-labelledby="wechat-dialog-title">
+    <div class="wechat-dialog__body">
+      <button class="wechat-dialog__close" type="button" id="wechat-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 7l10 10M17 7 7 17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <h2 id="wechat-dialog-title" data-i18n="wechatDialogTitle">WeChat</h2>
+      <p data-i18n="wechatDialogText">Scan the QR code to add me on WeChat.</p>
+      <img src="wechat-qr.jpg" alt="WeChat QR code for Yingzhi Mao">
+      <p class="wechat-id"><span data-i18n="wechatIdLabel">WeChat ID</span>: 15738183237</p>
+    </div>
+  </dialog>
   <script src="script.js"></script>
 </body>
 </html>

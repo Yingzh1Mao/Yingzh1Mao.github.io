@@ -56,7 +56,7 @@ const translations = {
     internDate1: "Jun 2026 - Present",
     intern1Role: "Algorithm Intern",
     intern1Org: "Ant Group · Alipay Business Group, Edge Intelligence Department",
-    intern1Focus: "Participated in the development and iterative optimization of Alipay AI, helping analyze and resolve model issues in real-world payment scenarios.",
+    intern1Focus: "Participated in the development and iterative optimization of AI Alipay (Abao), helping analyze and resolve model issues in real-world user scenarios.",
     publicationsTitle: "Selected Publications",
     venue1: "ACL 2026 Findings",
     publicationLink1: "Paper",
@@ -65,14 +65,18 @@ const translations = {
     publicationLink2: "Paper",
     codeLink2: "Code",
     honorsTitle: "Honors",
-    honorDateCann: "Apr 2026",
+    honorDateCann: "2026",
     honorCann: "CANN (Huawei Ascend) Core Contributor Certification",
     honorDate: "2020",
     honorText: "Zhengzhou University Outstanding Student Scholarship",
     contactEmail: "Email",
+    contactWechat: "WeChat",
     contactGithub: "GitHub",
     contactScholar: "Google Scholar",
-    contactCv: "CV"
+    contactCv: "CV",
+    wechatDialogTitle: "WeChat",
+    wechatDialogText: "Scan the QR code to add me on WeChat.",
+    wechatIdLabel: "WeChat ID"
   },
   zh: {
     pageTitle: "毛楹智 | 个人主页",
@@ -128,7 +132,7 @@ const translations = {
     internDate1: "2026 年 6 月 - 至今",
     intern1Role: "算法实习生",
     intern1Org: "蚂蚁集团 · 支付宝事业群-端智能技术部",
-    intern1Focus: "参与支付宝 AI 的开发与优化迭代，协助分析并解决模型在真实支付场景下的问题。",
+    intern1Focus: "参与 AI 支付宝（阿宝）的开发与优化迭代，协助分析并解决模型在真实用户场景下的问题。",
     publicationsTitle: "代表论文",
     venue1: "ACL 2026 Findings",
     publicationLink1: "Paper",
@@ -137,20 +141,27 @@ const translations = {
     publicationLink2: "Paper",
     codeLink2: "Code",
     honorsTitle: "荣誉奖励",
-    honorDateCann: "2026 年 4 月",
+    honorDateCann: "2026",
     honorCann: "CANN（华为 Ascend）核心贡献者认证",
     honorDate: "2020",
     honorText: "郑州大学优秀学生奖学金",
     contactEmail: "邮箱",
+    contactWechat: "微信",
     contactGithub: "GitHub",
     contactScholar: "谷歌学术",
-    contactCv: "个人简历"
+    contactCv: "个人简历",
+    wechatDialogTitle: "微信",
+    wechatDialogText: "扫码添加我的微信。",
+    wechatIdLabel: "微信号"
   }
 };
 
 const langButtons = document.querySelectorAll(".lang-button");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const descriptionNode = document.getElementById("page-description");
+const wechatButton = document.getElementById("wechat-button");
+const wechatDialog = document.getElementById("wechat-dialog");
+const wechatClose = document.getElementById("wechat-close");
 
 function applyLanguage(lang) {
   const dict = translations[lang] || translations.en;
@@ -178,6 +189,43 @@ langButtons.forEach((button) => {
     applyLanguage(button.dataset.lang);
   });
 });
+
+function openWechatDialog() {
+  if (wechatDialog.open) {
+    return;
+  }
+
+  if (typeof wechatDialog.showModal === "function") {
+    wechatDialog.showModal();
+  } else {
+    wechatDialog.setAttribute("open", "");
+  }
+
+  wechatButton.setAttribute("aria-expanded", "true");
+}
+
+function closeWechatDialog() {
+  if (typeof wechatDialog.close === "function") {
+    wechatDialog.close();
+  } else {
+    wechatDialog.removeAttribute("open");
+  }
+
+  wechatButton.setAttribute("aria-expanded", "false");
+}
+
+if (wechatButton && wechatDialog && wechatClose) {
+  wechatButton.addEventListener("click", openWechatDialog);
+  wechatClose.addEventListener("click", closeWechatDialog);
+  wechatDialog.addEventListener("close", () => {
+    wechatButton.setAttribute("aria-expanded", "false");
+  });
+  wechatDialog.addEventListener("click", (event) => {
+    if (event.target === wechatDialog) {
+      closeWechatDialog();
+    }
+  });
+}
 
 const savedLanguage = window.localStorage.getItem("preferred-language");
 const browserLanguage =
