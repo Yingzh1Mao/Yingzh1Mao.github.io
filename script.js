@@ -34,6 +34,9 @@ const translations = {
     newsDate0: "Apr 2026",
     news0:
       "Our paper \"When Models Outthink Their Safety: Unveiling and Mitigating Self-Jailbreak in Large Reasoning Models\" has been accepted to ACL 2026 Findings!",
+    newsDateCann: "Apr 2026",
+    newsCann:
+      "Received CANN (Huawei Ascend) Core Contributor certification.",
     newsDate1: "May 2025",
     news1:
       "Our paper \"AutoAlign: Get Your LLM Aligned with Minimal Annotations\" has been accepted to ACL 2025 Demo!",
@@ -62,6 +65,8 @@ const translations = {
     publicationLink2: "Paper",
     codeLink2: "Code",
     honorsTitle: "Honors",
+    honorDateCann: "Apr 2026",
+    honorCann: "CANN (Huawei Ascend) Core Contributor Certification",
     honorDate: "2020",
     honorText: "Zhengzhou University Outstanding Student Scholarship",
     contactEmail: "Email",
@@ -102,6 +107,9 @@ const translations = {
     newsDate0: "2026 年 4 月",
     news0:
       "我们的论文《When Models Outthink Their Safety: Unveiling and Mitigating Self-Jailbreak in Large Reasoning Models》已被 ACL 2026 Findings 接收。",
+    newsDateCann: "2026 年 4 月",
+    newsCann:
+      "获得 CANN（华为 Ascend）核心贡献者认证。",
     newsDate1: "2025 年 5 月",
     news1: "我们的论文《AutoAlign: Get Your LLM Aligned with Minimal Annotations》已被 ACL 2025 Demo 接收。",
     researchTitle: "研究方向",
@@ -129,6 +137,8 @@ const translations = {
     publicationLink2: "Paper",
     codeLink2: "Code",
     honorsTitle: "荣誉奖励",
+    honorDateCann: "2026 年 4 月",
+    honorCann: "CANN（华为 Ascend）核心贡献者认证",
     honorDate: "2020",
     honorText: "郑州大学优秀学生奖学金",
     contactEmail: "邮箱",
